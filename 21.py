@@ -21,7 +21,7 @@ def carta(cartas):
         cartas.append(10)
         valor = sum(cartas)
     valor = sum(cartas)
-    if valor > 21 and 11 in cartas:
+    if valor > 21 and "A" in cartas:
         cartas.remove(11)
         cartas.append(1)
         valor = sum(cartas)
@@ -62,10 +62,11 @@ def blackjack():
     
     if carta(maquina) > 21:
         print("la máquina se paso de 21. ¡Has ganado!")
-    elif carta(jugador) > carta(maquina):
+    elif carta(jugador) > carta(maquina) and carta(jugador) <= 21:
         print("¡has ganado!")
     elif carta(jugador) < carta(maquina):
         print("la máquina ha ganado")
     else:
-        print("empate, nadie gana")
+        if jugador <= 21:
+            print("empate, nadie gana")
 blackjack()
