@@ -1,12 +1,12 @@
 import random
 
 def baraja():
-    return [("diamantes", 2), ("diamantes", 3), ("diamantes", 4), ("diamantes", 5), ("diamantes", 6), ("diamantes", 7), ("diamantes", 8), ("diamantes", 9), ("diamantes", 10), ("diamantes", "Q"), ("diamantes", "J"), ("diamantes", "k"), ("diamantes", "A")] + [("picas", 2), ("picas", 3), ("picas", 4), ("picas", 5), ("picas", 6), ("picas", 7), ("picas", 8), ("picas", 9), ("picas", 10), ("picas", "Q"), ("picas", "J"), ("picas", "k"), ("picas", "A")] + [("treboles", 2), ("treboles", 3), ("treboles", 4), ("treboles", 5), ("treboles", 6), ("treboles", 7), ("treboles", 8), ("treboles", 9), ("treboles", 10), ("treboles", "Q"), ("treboles", "J"), ("treboles", "k"), ("treboles", "A")] + [("corazones", 2), ("corazones", 3), ("corazones", 4), ("corazones", 5), ("corazones", 6), ("corazones", 7), ("corazones", 8), ("corazones", 9), ("corazones", 10), ("corazones", "Q"), ("corazones", "J"), ("corazones", "k"), ("corazones", "A")]
+    return [2, 3, 4, 5, 6, 7, 8, 9, 10, "Q", "J", "k", "A"] * 4
 
 def carta(cartas):
-    if ("diamantes", 2) in cartas:
-        cartas.remove(("diamantes", 2))
-        cartas.append(2)
+    if "Q" in cartas:
+        cartas.remove("Q")
+        cartas.append(10)
         valor = sum(cartas)
     if "A" in cartas:
         cartas.remove("A")
